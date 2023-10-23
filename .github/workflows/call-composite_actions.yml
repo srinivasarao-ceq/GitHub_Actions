@@ -16,7 +16,7 @@ jobs:
 
       # Uses the Composite Action
       - name: Login into DockerHub
-        uses: srinivasarao-ceq/Composite_Actions/docker_build/action.yml@main
+        uses: srinivasarao-ceq/Composite_Actions/docker_build@main
         with:
           registry_username: ${{env.REGISTRY_USERNAME}}
           registry_password: ${{secrets.REGISTRY_PASSWORD}}
