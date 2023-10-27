@@ -1,4 +1,4 @@
-name: Call the reusable workflow
+name: Call the reusable workflow and run terraform scripts
 on:
   workflow_dispatch
 
@@ -6,13 +6,11 @@ env:
   region: us-east-1
   
 jobs:
-  Run-terraform-scripts:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: call the terraform workflow
+  call-terraform-workflow:
         uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
         with:
           region: ${{env.region}}
+          runs-on: ubuntu-20.04
         secrets:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
