@@ -1,6 +1,6 @@
 name: Call the reusable workflow
 on:
-  push
+  workflow_dispatch
 
 env:
   region: us-east-1
