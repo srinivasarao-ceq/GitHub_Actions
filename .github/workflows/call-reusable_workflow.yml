@@ -5,7 +5,7 @@ on:
 
 jobs:
   call-terraform-workflow:
-      - uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
+        uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
         with:
           region: us-east-1
           runs-on: ubuntu-20.04
