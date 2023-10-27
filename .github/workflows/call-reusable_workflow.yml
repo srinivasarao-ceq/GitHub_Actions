@@ -5,14 +5,10 @@ on:
 
 jobs:
   call-terraform-workflow:
-    runs-on: ubuntu-20.04
-    env:
-      region: us-east-1
-    steps:
-      - name: Call the reusable workflow
-        uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
+      - uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
         with:
-          region: ${{ env.region }}
-        env:
+          region: us-east-1
+          runs-on: ubuntu-20.04
+        secrets:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
