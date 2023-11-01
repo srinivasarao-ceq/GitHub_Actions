@@ -5,10 +5,10 @@ on:
 
 jobs:
   call-terraform-workflow:
-        uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
-        with:
-          region: us-east-1
-          runs-on: ubuntu-20.04
-        secrets: inherit
+    uses: srinivasarao-ceq/Reusable_workflows/.github/workflows/Terraform.yml@main
+    with:
+      region: us-east-1
+      runs-on: ubuntu-20.04
+    secrets: inherit
           # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
